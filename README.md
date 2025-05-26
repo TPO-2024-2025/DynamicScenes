@@ -10,9 +10,9 @@ Provides dynamic, time-based lighting control for Home Assistant with smooth int
 - **Time Shifting**: Adjust effective time for scene calculations
 
 ## Configuration
-To add the integration simply clone the repo into /config/custom_components
-### Integration config
 
+### Integration config
+To add the integration simply clone the repo into /config/custom_components
 ### UI Config
 To configure the side panel of the integration which allows the user to edit the scene do the following things.
 
