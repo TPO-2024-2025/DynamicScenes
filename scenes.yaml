@@ -1,38 +1,30 @@
 daylight:
   priority: 1
   times:
-    '20:00':
-    - brightness: 0
-      color_temp: 214
+    00:00:
+    - brightness: 10
+      color_temp: 153
       entities:
-      - light.kitchen
+      - light.living_room_ceiling
+      - light.living_room_tv
       - light.halway
-    - brightness: 123
-      color_temp: 164
-      entities:
-      - light.living_room
-    '21:00':
+    01:00:
     - brightness: 255
       color_temp: 500
       entities:
-      - light.kitchen
-      - light.living_room
+      - light.living_room_ceiling
+      - light.living_room_tv
       - light.halway
-daylight_occupied:
+tv:
   priority: 2
   times:
-    '20:00':
+    00:00:
+    - brightness: 10
+      color_temp: 153
+      entities:
+      - light.living_room_tv
+    01:00:
     - brightness: 50
-      color_temp: 454
+      color_temp: 500
       entities:
-      - light.kitchen
-    - brightness: 100
-      color_temp: 350
-      entities:
-      - light.living_room
-    '21:00':
-    - brightness: 255
-      color_temp: 250
-      entities:
-      - light.kitchen
-      - light.living_room
+      - light.living_room_tv

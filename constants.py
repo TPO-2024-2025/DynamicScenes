@@ -21,7 +21,7 @@ class SERVICENAME:
 class SERVICEDATA:
     """The data keys used in the service calls TO dynamic scenes services."""
 
-    ENTITY_ID = "entity_id"
+    ENTITY_IDS = "entity_ids"
     SCENE = "scene"
     TIMESHIFT = "timeshift"
     SHIFT = "shift"
@@ -51,6 +51,7 @@ class ENTRYDATA:
 
     UPDATE_INTERVAL = "update_interval"
 
+
 class HASSDATA:
     """The data keys used in the hass.data."""
 
@@ -70,6 +71,7 @@ class SCENE:
 
     OFF = "off"
     CUSTOM = "custom"
+
 
 class SERVICECALLS:
     """Reocuting constants used in outgoing service calls."""

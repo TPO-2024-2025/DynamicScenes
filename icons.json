@@ -1,0 +1,25 @@
+{
+  "services": {
+    "set_scene_condition_met": {
+      "service": "mdi:lightbulb-on"
+    },
+    "unset_scene_condition_met": {
+      "service": "mdi:lightbulb-off"
+    },
+    "stop_adjustments": {
+      "service": "mdi:pause-circle"
+    },
+    "continue_adjustments": {
+      "service": "mdi:play-circle"
+    },
+    "set_timeshift": {
+      "service": "mdi:clock-time-four"
+    },
+    "shift_timeshift": {
+      "service": "mdi:clock-fast"
+    }
+  },
+  "entity": {
+    "default": "mdi:creation"
+  }
+}

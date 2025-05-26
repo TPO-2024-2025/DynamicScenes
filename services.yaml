@@ -1,54 +1,108 @@
 # Example services.yaml
 set_scene_condition_met:
-  description: Tells the integration that the conditions for a scene to be active are met.
+  description: The scene will be able to followed by the specified entities, in case it has the highest priority of all active scenes.
   fields:
-    entity_id:
-      description: The entities to apply this scene to.
-      example: "light.living_room"
+    entity_ids:
+      description: The entities that will no longer follow the scene.
+      required: true
+      example: ["light.living_room_ceiling", "light.living_room_tv"]
+      selector:
+        entity:
+          multiple: true
+          domain: light
     scene:
-      description: The scene name.
+      description: The name of the scene whose condition is met.
+      required: true
       example: "daylight"
+      selector:
+        text:
+          placeholder: "Enter scene name"
 
 unset_scene_condition_met:
-  description: Tells the integration that the conditions for a scene to be active are no longer met.
+  description: The scene will not be able to be followed by the specified entities.
   fields:
-    entity_id:
-      description: The entities to apply this to.
-      example: "light.living_room"
+    entity_ids:
+      description: The entities that will no longer follow the scene.
+      required: true
+      example: ["light.living_room_ceiling", "light.living_room_tv"]
+      selector:
+        entity:
+          multiple: true
+          domain: light
     scene:
-      description: The scene name.
+      description: The name of the scene whose condition is no longer met.
+      required: true
       example: "daylight"
+      selector:
+        text:
+          placeholder: "Enter scene name"
 
 stop_adjustments:
-  description: Stops the automatic adjustments for the specified entities.
+  description: Stops entities from automatically adjusting their values to follow their scenes.
   fields:
-    entity_id:
-      description: The entities to stop adjustments for.
-      example: "light.living_room"
+    entity_ids:
+      description: The entities that will no longer follow the scene.
+      required: true
+      example: ["light.living_room_ceiling", "light.living_room_tv"]
+      selector:
+        entity:
+          multiple: true
+          domain: light
 
 continue_adjustments:
-  description: Continues the automatic adjustments for the specified entities.
+  description: Continue automatic adjustments of entities, after they were stopped.
   fields:
-    entity_id:
-      description: The entities to continue adjustments for.
-      example: "light.living_room"
+    entity_ids:
+      description: The entities that will no longer follow the scene.
+      required: true
+      example: ["light.living_room_ceiling", "light.living_room_tv"]
+      selector:
+        entity:
+          multiple: true
+          domain: light
 
 set_timeshift:
-  description: Set the timeshift of entities.
+  description: Sets the timeshift from current time, when the values from the scenes will be calculated for the specified entities.
   fields:
-    entity_id:
-      description: The entities to modify.
-      example: "light.living_room"
+    entity_ids:
+      description: The entities that will no longer follow the scene.
+      required: true
+      example: ["light.living_room_ceiling", "light.living_room_tv"]
+      selector:
+        entity:
+          multiple: true
+          domain: light
     timeshift:
-      description: The timeshift in seconds.
-      example: 60
+      description: The timeshift in minutes.
+      required: true
+      example: 0
+      selector:
+        number:
+          min: -720
+          max: 720
+          step: 15
+          unit_of_measurement: "minutes"
+          mode: slider
 
 shift_timeshift:
-  description: Shift the timeshift of entities.
+  description: Shifts the timeshift from current time, when the values from the scenes will be calculated for the specified entities.
   fields:
-    entity_id:
-      description: The entities to modify.
-      example: "light.living_room"
-    timeshift:
-      description: The timeshift to add in seconds.
-      example: 60
+    entity_ids:
+      description: The entities that will no longer follow the scene.
+      required: true
+      example: ["light.living_room_ceiling", "light.living_room_tv"]
+      selector:
+        entity:
+          multiple: true
+          domain: light
+    shift:
+      description: The shift to add in minutes.
+      required: true
+      example: 30
+      selector:
+        number:
+          min: -720
+          max: 720
+          step: 15
+          unit_of_measurement: "minutes"
+          mode: slider
