@@ -27,6 +27,8 @@ panel_custom:
     config:
       hello: world
 ```
+2. Copy the file from `UI/dynamic_scenes.js` to `core/config/www/dynamic_scenes.js`.
+If the `www` directory is not present simply create it.
 
 ## Usage
 
